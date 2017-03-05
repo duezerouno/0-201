@@ -9,7 +9,6 @@ A simple, one-page portfolio for Craft CMS.
 3. Create these Globals: About, Claim, Col1, Col2, Col3 and Col4.
 4. Create the Project assets source, paths should be images and yourdomain/images
 5. Download and install the required plugins: [Compressor](https://github.com/sathoro/Compressor) and [Minify](https://github.com/nystudio107/minify)
-6. 
 
 ### Theme Setup
 
