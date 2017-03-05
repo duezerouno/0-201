@@ -2,6 +2,8 @@
 
 A simple, one-page portfolio for Craft CMS.
 
+![Preview](0201.gif)
+
 ### Craft Setup
 
 1. Download and install [Craft CMS](https://craftcms.com/)
