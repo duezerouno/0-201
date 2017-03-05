@@ -1,0 +1,29 @@
+<footer class="hero is-black has-padding-bottom has-padding-top has-text-left">
+	    
+	{% cache %}
+	    {% block foot %}
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns has-padding-bottom">
+                    <div class="column is-one-third has-padding-bottom">
+                    <p class="animateme" data-when="enter" data-from="0.4" data-to="0" data-crop="false" data-opacity="0" data-translatey="-200">{{ col1.body }}</p>
+                    </div>
+                    <div class="column has-padding-bottom">
+                        <p class="animateme" data-when="enter" data-from="0.4" data-to="0" data-crop="false" data-opacity="0" data-translatey="-200">{{ col2.body }}</p>
+                    </div>
+                    <div class="column has-padding-bottom">
+                      <p class="animateme" data-when="enter" data-from="0.4" data-to="0" data-crop="false" data-opacity="0" data-translatey="-200">{{ col3.body }}</p>
+                    </div>
+                    <div class="column has-padding-bottom">
+                      <p class="animateme" data-when="enter" data-from="0.4" data-to="0" data-crop="false" data-opacity="0" data-translatey="-200"><strong>{{ col4.body }}</strong></p>
+                    </div>
+                  </div>
+                <p>
+            <!--<a class="anchor-scroll hvr-underline-from-right animateme" href="#top" data-class-to="body" data-on-scroll="blur-effect">Top of the page</a>.-->
+                </p>
+            </div>
+        </div>
+        {% endblock %}
+    {% endcache %}
+    
+</footer>

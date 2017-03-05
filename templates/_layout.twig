@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+{% include '_head' %}
+  <body class="animsition">
+    <section class="uno hero is-black is-fullheight" id="top">
+        <div class="hero-body">
+            <div class="container is-12 scrollme">
+                <div id="name" class="brand title is-1 animateme hvr-rotate" data-when="exit" data-from="0" data-to="1" data-opacity="0" data-translatey="200" data-class-to="body" data-on-scroll="blur-effect"><a href="#projects" class="anchor-scroll">{{ claim.body }}</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="uno hero is-white is-fullheight has-padding-bottom" id="projects">
+        <div class="hero-body">
+            <div class="container scrollme">
+                {% block content %}{% endblock %}
+            </div>
+    </section>
+    {% cache %}
+    <section class="uno hero is-light is-fullheight block">
+        <div class="hero-body">
+            <div class="container is-12 scrollme">
+                <div class="control is-grouped">
+                    <div class="columns is-multiline">
+                        <div class="column is-one-third timecontact animateme has-padding-bottom" data-when="enter" data-from="1" data-to="0" data-opacity="0" data-translatey="-300" data-easing="easeinout">
+                            <p class="title is-3">Barcelona,<br><span class="title is-3 local-date" data-tz="Europe/Paris"></span></p>
+                            <p class="title is-3 local-time" data-tz="Europe/Paris"></p>
+                        </div>
+                        <div class="column">
+                            <div class="brand title is-3 animateme" data-when="enter" data-from="1" data-to="0" data-opacity="0" data-translatey="-300" data-easing="easeinout">{{ about.body }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endcache %}
+    {% include '_footer' %}
+    </div>
+    <script src="/scripts/app.js"></script>
+
+  </body>
+  {% minify js %}
+<script>
+$('.anchor-scroll').anchorScroll({
+   scrollSpeed: 800, // scroll speed
+   offsetTop: 0, // offset for fixed top bars (defaults to 0)
+   onScroll: function () {
+     // callback on scroll start
+   },
+   scrollEnd: function () {
+     // callback on scroll end
+   }
+});
+
+$('footer').footerReveal({ shadow: false });
+
+$(document).ready(function() {
+    $('.animsition').animsition({
+      inClass:'fade-in',
+      outClass:'fade-out'
+    });
+  });
+
+$(document).ready(function() {
+    $('.tooltip').tooltipster({
+    anchor: 'bottom-left',
+    restoration: 'current',
+    minWidth: 200,
+    maxWidth: 300,
+    offset: [20, 20],
+    plugins: ['follower'],
+    theme: ['tooltipster-noir', 'tooltipster-noir-customized']
+  });
+});
+</script>
+{% endminify %}
+</html>

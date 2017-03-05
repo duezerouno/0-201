@@ -1,0 +1,30 @@
+{% extends "_layout" %}
+
+{% block content %}
+    {% cache %}
+	   {% for entry in craft.entries.section('projects').limit(10).find() %}
+			
+			    <div class="events columns tooltip has-padding-top animateme" data-tooltip-content="#{{ entry.title }}" data-when="enter" data-from="0.4" data-to="0" data-crop="false" data-opacity="0" data-translatey="-200">
+                    <div class="tooltip_templates">
+                        <span id="{{ entry.title }}">
+                        {% for asset in entry.popOverImg %}
+                         <img src="{{ asset.url }}" width="300" alt="{{ asset.filename }}"/>
+                        {% endfor %}
+                        </span>
+                    </div>
+                    <div class="column is-one-third">
+                        <p class="subtitle is-3 animateme tooltip">{{ entry.title }}</p>
+                    </div>
+                    <div class="column">
+                        <p class="subtitle is-3 animateme">{{ entry.projectSkills }}</p>
+                    </div>
+                    <div class="column">
+                        <p class="subtitle is-3 animateme">{{ entry.projectYear }}</p>
+                    </div>
+                    <div class="column hvr-sink">
+                        <a class="subtitle is-3 animateme" href="{{ entry.projectLink }}" target="_blank">View {{ entry.projectType }}</a>
+                    </div>
+                </div>
+		{% endfor %}
+	{% endcache %}
+{% endblock %}
