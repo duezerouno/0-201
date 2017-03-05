@@ -10,10 +10,11 @@ A simple, one-page portfolio for Craft CMS.
 4. Create the Project assets source, paths should be images and yourdomain/images
 5. Download and install the required plugins: [Compressor](https://github.com/sathoro/Compressor) and [Minify](https://github.com/nystudio107/minify)
 
-### Theme Setup
+### Theme Set-up
 
 1. Replace files in craft/templates with the ones from the Templates folder.
 2. Upload Public folder content to the Public folder on your server.
+3. Edit clock's time-zone in _layout.twig - Find yours [here](https://momentjs.com/timezone/).
 
 ## License
 
