@@ -1,0 +1,90 @@
+{
+  "name": "duezerouno/0-201",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "0-201",
+  "branch": "master",
+  "style": {
+    "name": "Brutalist",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BasicHeader",
+      "article": "article/MarkdownArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace",
+    "heading": {},
+    "typeScale": [
+      48,
+      32,
+      20,
+      18,
+      16,
+      14,
+      12
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "fluid": true
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#666",
+      "secondary": "#888",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/duezerouno/0-201",
+          "text": "GitHub"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "0-201",
+      "subhead": "A portfolio theme for Craft CMS.",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "0-201: A portfolio theme for Craft CMS.",
+          "url": ""
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "duezerouno",
+          "repo": "0-201"
+        }
+      ]
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<p>A simple, one-page portfolio for Craft CMS.</p>\n<p><img src=\"0201.gif\"></p>\n<h3>Craft Setup</h3>\n<ol>\n<li>Download and install <a href=\"https://craftcms.com/\">Craft CMS</a></li>\n<li>Create Projects section and add these Fields: Pop Over Img (Assets), Project Link, Project skills, Project Type and Project Year (Plain Text).</li>\n<li>Create these Globals: About, Claim, Col1, Col2, Col3 and Col4.</li>\n<li>Create the Project assets source, paths should be images and yourdomain/images</li>\n<li>Download and install the required plugins: <a href=\"https://github.com/sathoro/Compressor\">Compressor</a> and <a href=\"https://github.com/nystudio107/minify\">Minify</a></li>\n</ol>\n<h3>Theme Set-up</h3>\n<ol>\n<li>Replace files in craft/templates with the ones from the Templates folder.</li>\n<li>Upload Public folder content to the Public folder on your server.</li>\n<li>Edit clock&apos;s time-zone in _layout.twig - Find yours <a href=\"https://momentjs.com/timezone/\">here</a>.</li>\n</ol>\n<h2>License</h2>\n<p>The MIT License (MIT)</p>\n<p>Copyright (c) 2017 Andrea Grasso</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/duezerouno/0-201",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/duezerouno",
+          "text": "duezerouno"
+        }
+      ]
+    }
+  ]
+}
